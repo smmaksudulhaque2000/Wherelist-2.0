@@ -39,13 +39,14 @@ const NavBar = () => {
               Dashboard
             </NavLink>
           </li>
+          <li>
+        <ThemeToggleButton />
+      </li>
         </div>
       ) : (
         ""
       )}
-      <li>
-        <ThemeToggleButton />
-      </li>
+      
     </>
   );
 
@@ -84,10 +85,14 @@ const NavBar = () => {
               Dashboard
             </NavLink>
           </li>
+          
         </div>
       ) : (
         ""
       )}
+      <li className="text-gray-800">
+            <ThemeToggleButton />
+          </li>
     </>
   );
 

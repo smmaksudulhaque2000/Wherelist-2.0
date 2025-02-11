@@ -100,7 +100,7 @@ const Story = () => {
 
           <div className="text-center mt-12">
             <Link to={"/addItems"} className="flex justify-center">
-              <button className="w-1/4 p-2 btn-outline border-0 border-b-2 font-bold text-xl rounded-xl shadow-md">
+              <button className="w-2/4 lg:w-1/4 p-2 btn-outline border-0 border-b-2 font-bold text-xl rounded-xl shadow-md">
                 Post Lost / Found Items
               </button>
             </Link>
