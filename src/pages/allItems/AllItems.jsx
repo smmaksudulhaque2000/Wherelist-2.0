@@ -6,6 +6,8 @@ import {
   FaTag,
   FaUserAlt,
   FaEnvelope,
+  FaSortAmountDown,
+  FaSortAmountUp,
 } from "react-icons/fa";
 import { SiLinuxfoundation } from "react-icons/si";
 import { HiOutlineSearch } from "react-icons/hi";
@@ -19,6 +21,7 @@ const AllItems = () => {
   const [filteredItems, setFilteredItems] = useState(items);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6);
+  const [sortOrder, setSortOrder] = useState("asc");
   const pageOptions = [6, 9, 12, 18, 24];
 
   useEffect(() => {
@@ -38,6 +41,16 @@ const AllItems = () => {
         item.location.toLowerCase().includes(query)
     );
     setFilteredItems(filtered);
+  };
+
+  const handleSortToggle = () => {
+    const sortedItems = [...filteredItems].sort((a, b) => {
+      const dateA = new Date(a.dateLost);
+      const dateB = new Date(b.dateLost);
+      return sortOrder === "asc" ? dateA - dateB : dateB - dateA;
+    });
+    setFilteredItems(sortedItems);
+    setSortOrder(sortOrder === "asc" ? "desc" : "asc");
   };
 
   const handlePageChange = (pageNumber) => {
@@ -67,7 +80,7 @@ const AllItems = () => {
         <link rel="canonical" href="http://localhost:5173/items" />
       </Helmet>
       <div className="p-6">
-        <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-center w-4/4 lg:w-3/4 mx-auto">
+        <h1 className="text-3xl lg:text-4xl font-bold text-center w-4/4 lg:w-3/4 mx-auto">
           All Lost & Found Items: Explore, Search, and Help Reunite!
         </h1>
         <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">
@@ -78,15 +91,24 @@ const AllItems = () => {
           community that helps others!
         </p>
 
-        <div className="relative mb-6">
-          <HiOutlineSearch className="absolute top-3.5 left-4 text-gray-500 dark:text-gray-400 text-lg" />
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={handleSearch}
-            placeholder="Search by title or location..."
-            className="w-full p-3 pl-12 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 dark:bg-gray-800 dark:text-gray-200"
-          />
+        <div className="flex justify-between items-center gap-4 mb-6">
+          <div className="relative w-3/4">
+            <HiOutlineSearch className="absolute top-3.5 left-4 text-gray-500 dark:text-gray-400 text-lg" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={handleSearch}
+              placeholder="Search by title or location..."
+              className="w-full p-3 pl-12 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-400 dark:bg-gray-800 dark:text-gray-200"
+            />
+          </div>
+          <button
+            onClick={handleSortToggle}
+            className="flex items-center gap-2 bg-gray-800 text-white px-4 py-3 rounded-lg hover:bg-gray-900 transition w-1/4 "
+          >
+            {sortOrder === "asc" ? <FaSortAmountDown /> : <FaSortAmountUp />}
+            Sort by Date ({sortOrder === "asc" ? "Ascending" : "Descending"})
+          </button>
         </div>
 
         {currentItems.length === 0 ? (
@@ -97,7 +119,7 @@ const AllItems = () => {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {currentItems.map((item, index) => (
               <div
                 key={index}
@@ -140,10 +162,10 @@ const AllItems = () => {
                     <span className="font-medium">Date:</span>{" "}
                     {new Date(item.dateLost).toLocaleDateString()}
                   </p>
-                  <p className="text-gray-800 dark:text-gray-300 flex items-center gap-1">
+                  <p className="text-gray-600 dark:text-gray-400 flex items-center gap-1">
                     <FaTag className="mr-2 text-sky-500" />
                     <span className="font-medium">Description: </span>{" "}
-                    {item.description}
+                    <span className="truncate">{item.description}</span>
                   </p>
                 </div>
                 <div className="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-t border-gray-200 dark:border-gray-600">
@@ -155,7 +177,7 @@ const AllItems = () => {
                     {item.contactInfo.email}
                   </p>
                 </div>
-                <Link to={`/items/${item._id}`} className="btn">
+                <Link to={`/items/${item._id}`} className="btn m-4">
                   <button>View Details</button>
                 </Link>
               </div>
@@ -184,25 +206,10 @@ const AllItems = () => {
               ))}
             </select>
           </div>
-
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="px-4 py-2 mx-2 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg disabled:opacity-50"
-            >
-              Previous
-            </button>
-            <span className="text-lg text-gray-700 dark:text-gray-200">
+          <div>
+            <span className="text-gray-700 dark:text-gray-200">
               Page {currentPage} of {totalPages}
             </span>
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="px-4 py-2 mx-2 bg-gray-300 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg disabled:opacity-50"
-            >
-              Next
-            </button>
           </div>
         </div>
       </div>
