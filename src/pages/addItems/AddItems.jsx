@@ -78,7 +78,7 @@ const AddItems = () => {
         <link rel="canonical" href="http://localhost:5173/addItems" />
       </Helmet>
       <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg my-10 border border-gray-100">
-        <h2 className="text-3xl font-bold mb-6 text-center text-sky-600">
+        <h2 className="text-3xl font-bold mb-6 text-center text-gray-600">
           Add Lost OR Found Item
         </h2>
         <form onSubmit={handleAdd}>
