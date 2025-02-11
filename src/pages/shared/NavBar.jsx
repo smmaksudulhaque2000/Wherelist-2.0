@@ -13,30 +13,36 @@ const NavBar = () => {
 
   const dropdownLinks = (
     <>
-      <li className="text-gray-700 font-bold">
-        <NavLink to={"/addItems"}>
-          <MdNoteAdd />
-          Add Lost & Found Item
-        </NavLink>
-      </li>
-      <li className="text-gray-700 font-bold">
-        <NavLink to={"/recovered"}>
-          <LuBookUser />
-          All Recovered Items
-        </NavLink>
-      </li>
-      <li className="text-gray-700 font-bold">
-        <NavLink to={"/myItems"}>
-          <FaSitemap />
-          Manage My Items
-        </NavLink>
-      </li>
-      <li className="text-gray-700 font-bold">
-        <NavLink to={"/dashboard"}>
-          <FaUserPen />
-          Dashboard
-        </NavLink>
-      </li>
+      {user && user.email ? (
+        <div>
+          <li className="text-gray-700 font-bold">
+            <NavLink to={"/addItems"}>
+              <MdNoteAdd />
+              Add Lost & Found Item
+            </NavLink>
+          </li>
+          <li className="text-gray-700 font-bold">
+            <NavLink to={"/recovered"}>
+              <LuBookUser />
+              All Recovered Items
+            </NavLink>
+          </li>
+          <li className="text-gray-700 font-bold">
+            <NavLink to={"/myItems"}>
+              <FaSitemap />
+              Manage My Items
+            </NavLink>
+          </li>
+          <li className="text-gray-700 font-bold">
+            <NavLink to={"/dashboard"}>
+              <FaUserPen />
+              Dashboard
+            </NavLink>
+          </li>
+        </div>
+      ) : (
+        ""
+      )}
       <li>
         <ThemeToggleButton />
       </li>
@@ -57,11 +63,36 @@ const NavBar = () => {
           Lost & Found Items
         </NavLink>
       </li>
+      <li className="text-gray-700 font-bold">
+        <NavLink to={"/addItems"}>
+          <MdNoteAdd />
+          Add Lost & Found Item
+        </NavLink>
+      </li>
+
+      {user && user.email ? (
+        <div className="flex">
+          <li className="text-gray-700 font-bold">
+            <NavLink to={"/recovered"}>
+              <LuBookUser />
+              All Recovered Items
+            </NavLink>
+          </li>
+          <li className="text-gray-700 font-bold">
+            <NavLink to={"/dashboard"}>
+              <FaUserPen />
+              Dashboard
+            </NavLink>
+          </li>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 
   return (
-    <div className="navbar lg:px-10 justify-between">
+    <div className="navbar sticky top-0 z-50 lg:px-10 justify-between bg-gradient-to-r from-gray-200 to-gray-400 shadow-md">
       <div>
         <Link
           to={"/"}
@@ -124,10 +155,16 @@ const NavBar = () => {
           </button>
         ) : (
           <div className="flex flex-col gap-2">
-            <Link className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded" to="/auth/login">
+            <Link
+              className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded"
+              to="/auth/login"
+            >
               Login
             </Link>
-            <Link className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded" to="/auth/register">
+            <Link
+              className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded"
+              to="/auth/register"
+            >
               Register
             </Link>
           </div>
