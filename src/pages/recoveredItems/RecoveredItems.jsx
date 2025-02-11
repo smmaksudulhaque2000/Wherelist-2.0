@@ -181,7 +181,7 @@ const RecoveredItems = () => {
             {filteredItems.map((itemData, index) => (
               <div
                 key={index}
-                className="border border-gray-300 rounded-md p-4 shadow-md bg-white flex flex-col text-center"
+                className="border border-gray-300 rounded-lg p-4 shadow-md bg-white flex flex-col text-center"
               >
                 <img
                   src={itemData.item?.imageUrl}
