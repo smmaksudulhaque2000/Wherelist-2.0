@@ -85,7 +85,7 @@ const Dashboard = () => {
             </div>
 
             <button
-              className="btn bg-gray-500 my-5 flex items-center gap-2 text-white"
+              className="my-5 flex items-center justify-center gap-2 w-full p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500"
               onClick={() => setShowModal(true)}
             >
               <FaPen /> Update Your Profile

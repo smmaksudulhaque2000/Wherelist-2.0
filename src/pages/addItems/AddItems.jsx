@@ -203,7 +203,7 @@ const AddItems = () => {
 
           <button
             type="submit"
-            className="btn bg-slate-600 w-full py-3 text-white font-semibold text-lg rounded-lg hover:bg-sky-700"
+            className="p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500 text-center w-full"
           >
             Add Item
           </button>

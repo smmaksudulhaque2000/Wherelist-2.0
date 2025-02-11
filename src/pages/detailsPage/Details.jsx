@@ -87,7 +87,7 @@ const Details = () => {
   }
 
   return (
-    <div className="p-6 my-10 max-w-4xl mx-auto text-gray-800 dark:text-gray-100 bg-white dark:bg-gray-900 rounded-lg shadow-lg">
+    <div className="p-6 my-10 max-w-4xl mx-auto text-gray-800 bg-white dark:bg-gray-400 rounded-lg shadow-lg">
       <h2 className="text-3xl font-bold mb-6 text-center">{data?.title}</h2>
       <div className="grid md:grid-cols-2 gap-8">
         <div>
@@ -204,7 +204,7 @@ const Details = () => {
                 />
                 <div>
                   <p className="text-lg font-semibold">{user?.displayName}</p>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  <p className="text-sm">
                     {user?.email}
                   </p>
                 </div>
@@ -239,7 +239,7 @@ const Details = () => {
         />
         <div>
           <p className="text-xl font-semibold">{user?.displayName}</p>
-          <p className="text-gray-600 dark:text-gray-400">{user?.email}</p>
+          <p className="text-gray-600 dark:text-gray-800">{user?.email}</p>
         </div>
       </div>
     </div>

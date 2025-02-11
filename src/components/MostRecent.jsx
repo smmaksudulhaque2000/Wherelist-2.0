@@ -72,7 +72,7 @@ const MostRecent = ({ items }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
-                className="btn-outline border-1 border-b-2 bg-gray-600 py-2 px-4 rounded  transition w-full mx-auto flex items-center justify-center text-white"
+                className="w-full px-5 py-4 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500"
               >
                 View Details
               </motion.button>

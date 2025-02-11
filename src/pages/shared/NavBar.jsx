@@ -15,25 +15,25 @@ const NavBar = () => {
     <>
       {user && user.email ? (
         <div>
-          <li className="text-gray-700 font-bold">
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/addItems"}>
               <MdNoteAdd />
               Add Lost & Found Item
             </NavLink>
           </li>
-          <li className="text-gray-700 font-bold">
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/recovered"}>
               <LuBookUser />
               All Recovered Items
             </NavLink>
           </li>
-          <li className="text-gray-700 font-bold">
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/myItems"}>
               <FaSitemap />
               Manage My Items
             </NavLink>
           </li>
-          <li className="text-gray-700 font-bold">
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/dashboard"}>
               <FaUserPen />
               Dashboard
@@ -51,19 +51,19 @@ const NavBar = () => {
 
   const mainLinks = (
     <>
-      <li className="text-gray-700 font-bold">
+      <li className="text-gray-600 font-bold">
         <NavLink to={"/"}>
           <FaHome />
           Home
         </NavLink>
       </li>
-      <li className="text-gray-700 font-bold">
+      <li className="text-gray-600 font-bold">
         <NavLink to={"/items"}>
           <TiThSmall />
           Lost & Found Items
         </NavLink>
       </li>
-      <li className="text-gray-700 font-bold">
+      <li className="text-gray-600 font-bold">
         <NavLink to={"/addItems"}>
           <MdNoteAdd />
           Add Lost & Found Item
@@ -72,13 +72,13 @@ const NavBar = () => {
 
       {user && user.email ? (
         <div className="flex">
-          <li className="text-gray-700 font-bold">
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/recovered"}>
               <LuBookUser />
               All Recovered Items
             </NavLink>
           </li>
-          <li className="text-gray-700 font-bold">
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/dashboard"}>
               <FaUserPen />
               Dashboard
@@ -149,20 +149,20 @@ const NavBar = () => {
         {user && user.email ? (
           <button
             onClick={logOut}
-            className="bg-gray-700 text-white p-2 rounded"
+            className="bg-gray-600 hover:bg-gray-700 focus:outline-none text-white p-2 rounded"
           >
             Log Out
           </button>
         ) : (
           <div className="flex flex-col gap-2">
             <Link
-              className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded"
+              className="bg-gray-600 hover:bg-gray-700 focus:outline-none text-white p-1 lg:p-2 text-center rounded"
               to="/auth/login"
             >
               Login
             </Link>
             <Link
-              className="bg-gray-700 text-white p-1 lg:p-2 text-center rounded"
+              className="bg-gray-600 hover:bg-gray-700 focus:outline-none text-white p-1 lg:p-2 text-center rounded"
               to="/auth/register"
             >
               Register

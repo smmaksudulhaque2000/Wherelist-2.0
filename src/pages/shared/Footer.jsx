@@ -64,7 +64,7 @@ const Footer = () => {
                     />
                     <button 
                         onClick={handleSubscribe} 
-                        className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-md">
+                        className="btn-outline border-b-2 bg-gray-600 hover:bg-gray-700 text-white py-2 px-6 rounded-md">
                         Subscribe
                     </button>
                 </div>

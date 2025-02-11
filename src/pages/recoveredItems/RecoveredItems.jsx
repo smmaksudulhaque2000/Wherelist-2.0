@@ -102,13 +102,13 @@ const RecoveredItems = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={handleSort}
-              className="text-xl text-white border p-2 rounded-md bg-gray-500"
+              className="w-full p-2 lg:p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500 text-center"
             >
               {sortOrder === "asc" ? "Sort Descending" : "Sort Ascending"}
             </button>
             <button
               id="layout-toggle-button"
-              className="text-3xl"
+              className="text-4xl"
               onClick={toggleLayout}
             >
               {isTableLayout ? <FaThLarge /> : <FaTable />}

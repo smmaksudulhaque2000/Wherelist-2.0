@@ -131,7 +131,7 @@ const Login = () => {
                 </a>
               </label>
               <div className="form-control mt-6">
-                <button type="submit" className="btn bg-gray-500">
+                <button type="submit" className="btn bg-gray-600 hover:bg-gray-700 focus:outline-none text-white">
                   Login
                 </button>
                 <div className="divider">OR</div>

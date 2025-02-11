@@ -104,7 +104,7 @@ const AllItems = () => {
           </div>
           <button
             onClick={handleSortToggle}
-            className="flex items-center gap-2 bg-gray-800 text-white px-4 py-3 rounded-lg hover:bg-gray-900 transition w-1/4 "
+            className="flex items-center justify-center gap-4 p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-900 focus:outline-none focus:bg-gray-500 text-center"
           >
             {sortOrder === "asc" ? <FaSortAmountDown /> : <FaSortAmountUp />}
             Sort by Date ({sortOrder === "asc" ? "Ascending" : "Descending"})
@@ -177,8 +177,8 @@ const AllItems = () => {
                     {item.contactInfo.email}
                   </p>
                 </div>
-                <Link to={`/items/${item._id}`} className="btn m-4">
-                  <button>View Details</button>
+                <Link to={`/items/${item._id}`} className="w-3/4 p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500 text-center">
+                  View Details
                 </Link>
               </div>
             ))}
