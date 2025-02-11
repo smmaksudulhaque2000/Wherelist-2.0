@@ -11,7 +11,7 @@ const About = () => {
   }, []);
 
   return (
-    <div>
+    <div id="about">
       <h3 className="text-3xl lg:text-4xl font-bold mb-4 mt-10 text-center w-4/4 lg:w-3/4 mx-auto">
         About Us
       </h3>
