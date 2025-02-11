@@ -13,7 +13,7 @@ const Footer = () => {
     };
 
     return (
-        <div className="bg-gray-800 text-white flex flex-col justify-center items-center gap-10 py-16">
+        <div className="bg-gray-800 text-white flex flex-col justify-center items-center gap-10 py-16 mt-10">
             <div className="flex gap-8 justify-center">
                 <a href="https://www.facebook.com/maksudulhaque2000" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
                     <FaFacebook className="text-4xl hover:scale-110 transition-transform duration-300" />

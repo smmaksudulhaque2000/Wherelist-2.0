@@ -17,10 +17,10 @@ const MostRecent = ({ items }) => {
     .slice(0, 6);
 
   return (
-    <div className="p-4">
+    <div>
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">Most Recent Lost & Found Items</h2>
-        <p className="text-lg text-gray-500 w-full lg:w-3/4 mx-auto">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-4 mt-10 text-center w-4/4 lg:w-3/4 mx-auto">Most Recent Lost & Found Items</h2>
+        <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">
           Browse through the most recent lost and found items posted by users in your area. Whether you've
           misplaced something valuable or found an item that belongs to someone else, this platform helps you
           reconnect with lost belongings. Join the community in helping return lost items or locating
@@ -72,7 +72,7 @@ const MostRecent = ({ items }) => {
                 animate={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.3 }}
-                className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition w-full flex items-center justify-center"
+                className="btn-outline border-1 border-b-2 bg-gray-400 py-2 px-4 rounded  transition w-full mx-auto flex items-center justify-center"
               >
                 View Details
               </motion.button>
@@ -80,8 +80,8 @@ const MostRecent = ({ items }) => {
           </motion.div>
         ))}
       </div>
-      <Link to={"/items"} className="bg-sky-300">
-        <button className="w-full p-2 bg-sky-300 font-bold text-xl mt-5">
+      <Link to={"/items"} className='flex justify-center'>
+        <button className="w-1/4 p-2 btn-outline border-1 border-b-2 font-bold text-xl mt-5 rounded-xl shadow-md">
           See All
         </button>
       </Link>

@@ -44,7 +44,21 @@ const Announcements = () => {
             description: "Sign up now to be part of our mobile app beta testing group and get early access to the new app features.",
             imageUrl: "https://i.ibb.co.com/VJQKKdr/depositphotos-9691837-stock-photo-lost-and-found.webp",
             date: "December 5, 2024"
-        }
+        },
+        {
+            "id": 7,
+            "title": "Community Support Program Launched!",
+            "description": "We are thrilled to introduce a community support program to assist users in resolving lost and found cases quickly.",
+            "imageUrl": "https://i.ibb.co.com/jZsKBT4/hh1.jpg",
+            "date": "December 1, 2024"
+          },
+          {
+            "id": 8,
+            "title": "Enhanced Notifications for Real-Time Updates",
+            "description": "Stay updated with real-time notifications whenever your lost items are found or new items match your search criteria.",
+            "imageUrl": "https://i.ibb.co.com/pL2FXgc/h1.jpg",
+            "date": "November 28, 2024"
+          },
     ];
 
     return (
@@ -55,11 +69,11 @@ const Announcements = () => {
                 transition={{ duration: 1 }}
                 className="text-center mb-8"
             >
-                <h2 className="text-3xl font-bold tracking-tight text-gray-800">Latest Announcements</h2>
-                <p className="mt-2 text-lg text-gray-600">Stay updated with our latest news and updates.</p>
+                <h2 className="text-3xl lg:text-4xl font-bold mb-4 mt-10 text-center w-4/4 lg:w-3/4 mx-auto">Latest Announcements</h2>
+                <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">Stay updated with our latest news and updates.</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {announcements.map((announcement) => (
                     <motion.div
                         key={announcement.id}
