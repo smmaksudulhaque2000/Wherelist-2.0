@@ -36,11 +36,15 @@ const RecoveredItems = () => {
           setLoading(false);
         })
         .catch((error) => {
-          console.error("Error fetching items:", error);
-          toast.error(`Error fetching items: ${error.message || "Unknown error occurred"}`, {
-            position: "top-right",
-            autoClose: 3000,
-          });
+          toast.error(
+            `Error fetching items: ${
+              error.message || "Unknown error occurred"
+            }`,
+            {
+              position: "top-right",
+              autoClose: 3000,
+            }
+          );
           setLoading(false);
         });
     }
@@ -80,9 +84,12 @@ const RecoveredItems = () => {
     return (
       <div className="flex justify-center items-center h-screen text-gray-500 text-xl">
         <div className="flex flex-col items-center justify-center bg-gray-100 p-8 rounded-md shadow-md">
-          <h2 className="text-3xl font-bold mb-4 text-gray-700">No Recovered Items</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-700">
+            No Recovered Items
+          </h2>
           <p className="text-lg text-gray-600">
-            There are no recovered items available at the moment. Please check back later!
+            There are no recovered items available at the moment. Please check
+            back later!
           </p>
         </div>
       </div>
@@ -98,7 +105,9 @@ const RecoveredItems = () => {
       </Helmet>
       <div className="recovered-items p-8">
         <div className="flex justify-between items-center mb-4">
-          <h1 className="text-2xl font-bold">Recovered Items : {items.length}</h1>
+          <h1 className="text-2xl font-bold">
+            Recovered Items : {items.length}
+          </h1>
           <div className="flex items-center gap-4">
             <button
               onClick={handleSort}
@@ -135,12 +144,22 @@ const RecoveredItems = () => {
               <thead>
                 <tr className="bg-gray-100">
                   <th className="border border-gray-300 px-4 py-2">Item</th>
-                  <th className="border border-gray-300 px-4 py-2">Item Category</th>
-                  <th className="border border-gray-300 px-4 py-2">Post Type</th>
-                  <th className="border border-gray-300 px-4 py-2">Date Lost/Found</th>
+                  <th className="border border-gray-300 px-4 py-2">
+                    Item Category
+                  </th>
+                  <th className="border border-gray-300 px-4 py-2">
+                    Post Type
+                  </th>
+                  <th className="border border-gray-300 px-4 py-2">
+                    Date Lost/Found
+                  </th>
                   <th className="border border-gray-300 px-4 py-2">Email</th>
-                  <th className="border border-gray-300 px-4 py-2">Recovered Location</th>
-                  <th className="border border-gray-300 px-4 py-2">Recovery Date</th>
+                  <th className="border border-gray-300 px-4 py-2">
+                    Recovered Location
+                  </th>
+                  <th className="border border-gray-300 px-4 py-2">
+                    Recovery Date
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -195,7 +214,8 @@ const RecoveredItems = () => {
                   <FaTag /> Category: {itemData.item?.category}
                 </p>
                 <p className="text-sm text-gray-600 flex items-center gap-2">
-                  <FaCalendarAlt /> {new Date(itemData.item?.dateLost).toLocaleDateString()}
+                  <FaCalendarAlt />{" "}
+                  {new Date(itemData.item?.dateLost).toLocaleDateString()}
                 </p>
                 <p className="text-sm text-gray-600 flex items-center gap-2">
                   <FaEnvelope /> Email: {itemData.recoveredBy?.email}
@@ -204,7 +224,8 @@ const RecoveredItems = () => {
                   <FaMapMarkerAlt /> Location: {itemData.recoveredLocation}
                 </p>
                 <p className="text-sm text-gray-600 flex items-center gap-2">
-                  <FaCalendarAlt /> Recovery Date: {new Date(itemData.recoveryDate).toLocaleDateString()}
+                  <FaCalendarAlt /> Recovery Date:{" "}
+                  {new Date(itemData.recoveryDate).toLocaleDateString()}
                 </p>
               </div>
             ))}

@@ -25,11 +25,16 @@ const AllItems = () => {
   const pageOptions = [6, 9, 12, 18, 24];
 
   useEffect(() => {
+    setLoading(true);
     if (items) {
-      setLoading(false);
       setFilteredItems(items);
+      setLoading(false);
     }
   }, [items]);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
@@ -67,10 +72,6 @@ const AllItems = () => {
   const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
 
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
-
-  if (loading) {
-    return <Loading />;
-  }
 
   return (
     <div>
@@ -177,7 +178,10 @@ const AllItems = () => {
                     {item.contactInfo.email}
                   </p>
                 </div>
-                <Link to={`/items/${item._id}`} className="w-3/4 p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500 text-center">
+                <Link
+                  to={`/items/${item._id}`}
+                  className="w-3/4 p-4 m-4 mx-auto text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-gray-600 rounded-md hover:bg-gray-500 focus:outline-none focus:bg-gray-500 text-center"
+                >
                   View Details
                 </Link>
               </div>
