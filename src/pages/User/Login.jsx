@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import axios from "axios";
+import Lottie3 from "../../components/Lottie3";
 
 const Login = () => {
   const { userLogin, setUser } = useContext(AuthContext);
@@ -77,7 +78,7 @@ const Login = () => {
 
   return (
     <div>
-      <div className="hero bg-base-200 min-h-screen">
+      <div className="hero  min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold text-gray-700">Login now!</h1>
@@ -87,6 +88,9 @@ const Login = () => {
               can help bring smiles and comfort to countless lives. Together,
               let's make this winter cozy for everyone!
             </p>
+            <div className="hidden lg:flex">
+            <Lottie3></Lottie3>
+            </div>
           </div>
           <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form onSubmit={handleLogin} className="card-body">
