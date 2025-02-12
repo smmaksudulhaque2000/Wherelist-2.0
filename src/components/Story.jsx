@@ -6,11 +6,11 @@ import Marquee from "react-fast-marquee";
 
 const Story = () => {
   return (
-    <div>
-      <section id="stories-of-impact">
+    <div className="mt-10">
+      <section id="stories-of-impact ">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 mt-10 text-center w-4/4 lg:w-3/4 mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4  text-center w-4/4 lg:w-3/4 mx-auto">
               Lost and Found Stories
             </h2>
             <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">

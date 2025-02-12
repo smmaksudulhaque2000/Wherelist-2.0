@@ -6,6 +6,7 @@ import Announcements from "../../components/Announcements";
 import Story from "../../components/Story";
 import MostRecent from "../../components/MostRecent";
 import About from "../../components/About";
+import FAQ from "../../components/FAQ";
 
 const Home = () => {
   const items = useLoaderData();
@@ -28,6 +29,7 @@ const Home = () => {
       <MostRecent items={items} />
       <About />
       <Announcements />
+      <FAQ></FAQ>
       <Story />
     </div>
   );

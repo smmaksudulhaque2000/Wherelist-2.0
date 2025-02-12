@@ -74,7 +74,7 @@ const Footer = () => {
                 <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#about">About Us</a>
                 <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#announcements">Our Services</a>
                 <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#">Privacy Policy</a>
-                <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#">FAQ</a>
+                <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#faq">FAQ</a>
             </div>
 
             <div className="py-4 text-center">

@@ -101,7 +101,6 @@ const RecoveredItems = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Recovered Item | WhereIsIt</title>
-        <link rel="canonical" href="http://localhost:5173/recovered" />
       </Helmet>
       <div className="recovered-items">
         <div className="flex justify-between items-center mb-4">

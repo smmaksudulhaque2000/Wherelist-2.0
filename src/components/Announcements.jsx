@@ -62,7 +62,7 @@ const Announcements = () => {
     ];
 
     return (
-        <div className="py-8" id='announcements'>
+        <div className="mt-10" id='announcements'>
             <motion.div
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
