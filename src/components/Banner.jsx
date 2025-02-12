@@ -13,7 +13,6 @@ const Banner = () => {
         here. Join us in helping each other reunite with lost possessions!
       </p>
       <Carousel></Carousel>
-      
     </div>
   );
 };

@@ -20,9 +20,9 @@ const AllItems = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredItems, setFilteredItems] = useState(items);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(6);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
   const [sortOrder, setSortOrder] = useState("asc");
-  const pageOptions = [6, 9, 12, 18, 24];
+  const pageOptions = [8, 16, 24, 48, 96];
 
   useEffect(() => {
     setLoading(true);
@@ -74,13 +74,13 @@ const AllItems = () => {
   const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
 
   return (
-    <div>
+    <div className="my-6">
       <Helmet>
         <meta charSet="utf-8" />
         <title>All Items | WhereIsIt</title>
         <link rel="canonical" href="http://localhost:5173/items" />
       </Helmet>
-      <div className="p-6">
+      <div>
         <h1 className="text-3xl lg:text-4xl font-bold text-center w-4/4 lg:w-3/4 mx-auto">
           All Lost & Found Items: Explore, Search, and Help Reunite!
         </h1>

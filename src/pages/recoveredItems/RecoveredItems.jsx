@@ -97,13 +97,13 @@ const RecoveredItems = () => {
   }
 
   return (
-    <div>
+    <div className="my-6">
       <Helmet>
         <meta charSet="utf-8" />
         <title>Recovered Item | WhereIsIt</title>
         <link rel="canonical" href="http://localhost:5173/recovered" />
       </Helmet>
-      <div className="recovered-items p-8">
+      <div className="recovered-items">
         <div className="flex justify-between items-center mb-4">
           <h1 className="text-2xl font-bold">
             Recovered Items : {items.length}

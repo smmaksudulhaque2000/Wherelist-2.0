@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaDonate, FaHome, FaSitemap, FaUserCircle } from "react-icons/fa";
+import { FaHome, FaSitemap, FaUserCircle } from "react-icons/fa";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext/AuthContext";
 import { FaUserPen } from "react-icons/fa6";
@@ -15,18 +15,7 @@ const NavBar = () => {
     <>
       {user && user.email ? (
         <div>
-          <li className="text-gray-600 font-bold">
-            <NavLink to={"/addItems"}>
-              <MdNoteAdd />
-              Add Lost & Found Item
-            </NavLink>
-          </li>
-          <li className="text-gray-600 font-bold">
-            <NavLink to={"/recovered"}>
-              <LuBookUser />
-              All Recovered Items
-            </NavLink>
-          </li>
+          
           <li className="text-gray-600 font-bold">
             <NavLink to={"/myItems"}>
               <FaSitemap />
@@ -39,14 +28,20 @@ const NavBar = () => {
               Dashboard
             </NavLink>
           </li>
+          <li className="text-gray-600 font-bold">
+            <NavLink to={"/recovered"}>
+              <LuBookUser />
+              All Recovered Items
+            </NavLink>
+          </li>
           <li>
-        <ThemeToggleButton />
-      </li>
+            <ThemeToggleButton />
+          </li>
         </div>
       ) : (
-        ""
+        <div>
+        </div>
       )}
-      
     </>
   );
 
@@ -80,19 +75,24 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li className="text-gray-600 font-bold">
+            <NavLink to={"/myItems"}>
+              <FaSitemap />
+              Manage My Items
+            </NavLink>
+          </li>
+          <li className="text-gray-600 font-bold">
             <NavLink to={"/dashboard"}>
               <FaUserPen />
               Dashboard
             </NavLink>
           </li>
-          
         </div>
       ) : (
         ""
       )}
       <li className="text-gray-800">
-            <ThemeToggleButton />
-          </li>
+        <ThemeToggleButton />
+      </li>
     </>
   );
 
@@ -132,21 +132,27 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 lg:hidden"
           >
-            <li className="text-gray-700 font-bold lg:hidden">
+            <li className="text-gray-700 font-bold">
               <NavLink to={"/"}>
                 <FaHome />
                 Home
               </NavLink>
             </li>
-            <li className="text-gray-700 font-bold lg:hidden">
+            <li className="text-gray-700 font-bold">
               <NavLink to={"/items"}>
                 <TiThSmall />
                 Lost & Found Items
               </NavLink>
             </li>
-
+            <li className="text-gray-600 font-bold">
+            <NavLink to={"/addItems"}>
+              <MdNoteAdd />
+              Add Lost & Found Item
+            </NavLink>
+          </li>
+          
             {dropdownLinks}
           </ul>
         </div>

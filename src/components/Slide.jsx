@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Slide = ({ image, text }) => {
   return (
-    <div className="relative w-full h-[40rem]">
+    <div className="relative w-full h-[30rem] lg:h-[40rem]">
       <img
         src={image}
         alt={text}

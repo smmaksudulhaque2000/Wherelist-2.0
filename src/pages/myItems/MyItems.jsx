@@ -68,7 +68,7 @@ const MyItems = () => {
   if (loading) return <Loading />;
 
   return (
-    <div>
+    <div className="my-6">
       <Helmet>
         <meta charSet="utf-8" />
         <title>My Items | WhereIsIt</title>
@@ -93,7 +93,7 @@ const MyItems = () => {
             placeholder="Search by Title or Location"
             value={searchQuery}
             onChange={handleSearch}
-            className="w-full p-3 pl-10 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:outline-none"
+            className="w-full p-3 pl-10 rounded-lg bg-gray-100 dark:bg-gray-600 text-gray-800 dark:text-gray-200 focus:outline-none"
           />
           <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-300" />
         </div>
@@ -103,8 +103,8 @@ const MyItems = () => {
             onClick={() => setPostTypeFilter("Found")}
             className={`px-6 py-3 rounded ${
               postTypeFilter === "Found"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                ? "bg-gray-800 text-white"
+                : "bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200"
             }`}
           >
             Found
@@ -113,8 +113,8 @@ const MyItems = () => {
             onClick={() => setPostTypeFilter("Lost")}
             className={`px-6 py-2 rounded ${
               postTypeFilter === "Lost"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                ? "bg-gray-800 text-white"
+                : "bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-200"
             }`}
           >
             Lost
@@ -122,7 +122,7 @@ const MyItems = () => {
         </div>
       </div>
 
-      <div className="p-4 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200">
+      <div className="p-4 bg-gray-50 dark:bg-gray-600 text-gray-800 dark:text-gray-200">
         <h3 className="text-2xl font-bold mb-4">
           My Items: {filteredItems.length}
         </h3>
