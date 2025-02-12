@@ -60,20 +60,20 @@ const MostRecent = ({ items }) => {
               className="w-full h-60 rounded-md mb-4"
             />
             <h4 className="text-lg font-bold mb-2 flex items-center">
-              <FaInfoCircle className="mr-2 text-blue-500" /> {item.title}
+              <FaInfoCircle className="mr-2 text-gray-500 truncate" /> {item.title}
             </h4>
             <p className="font-bold text-gray-500 mb-2 flex items-center">
-              <FaTag className="mr-2 text-green-500" /> {item.postType}
+              <FaTag className="mr-2 text-gray-500" /> {item.postType}
             </p>
-            <p className="text-gray-600 mb-2">{item.description}</p>
+            <p className="text-gray-600 mb-2 truncate">{item.description}</p>
             <p className="text-sm text-gray-500 mb-2 flex items-center">
-              <FaTag className="mr-2 text-purple-500" /> {item.category}
-            </p>
-            <p className="text-sm text-gray-500 mb-2 flex items-center">
-              <FaMapMarkerAlt className="mr-2 text-red-500" /> {item.location}
+              <FaTag className="mr-2 text-gray-500" /> {item.category}
             </p>
             <p className="text-sm text-gray-500 mb-2 flex items-center">
-              <FaCalendarAlt className="mr-2 text-yellow-500" />{" "}
+              <FaMapMarkerAlt className="mr-2 text-gray-500" /> {item.location}
+            </p>
+            <p className="text-sm text-gray-500 mb-2 flex items-center">
+              <FaCalendarAlt className="mr-2 text-gray-500" />{" "}
               {new Date(item.dateLost).toLocaleDateString()}
             </p>
             <Link to={`/items/${item._id}`}>

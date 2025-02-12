@@ -132,12 +132,12 @@ const AllItems = () => {
                   className="w-full h-60"
                 />
                 <div className="p-4">
-                  <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center">
+                  <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2 flex items-center truncate">
                     {item.title}
                   </h4>
                   <div className="flex justify-between items-center">
                     <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-1">
-                      <SiLinuxfoundation className="mr-2 text-sky-500" />
+                      <SiLinuxfoundation className="mr-2 text-gray-200" />
                       <span className="font-medium">PostType: </span>{" "}
                       {item.postType}
                     </p>
@@ -149,32 +149,32 @@ const AllItems = () => {
                   </div>
 
                   <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-1">
-                    <FaTag className="mr-2 text-sky-500" />
+                    <FaTag className="mr-2 text-gray-200" />
                     <span className="font-medium">Category: </span>{" "}
                     {item.category}
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 mb-2 flex items-center gap-1">
-                    <FaMapMarkerAlt className="mr-2 text-sky-500" />
+                    <FaMapMarkerAlt className="mr-2 text-gray-200" />
                     <span className="font-medium">Location: </span>{" "}
                     {item.location}
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 mb-4 flex items-center gap-1">
-                    <FaCalendarAlt className="mr-2 text-sky-500" />
+                    <FaCalendarAlt className="mr-2 text-gray-200" />
                     <span className="font-medium">Date:</span>{" "}
                     {new Date(item.dateLost).toLocaleDateString()}
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 flex items-center gap-1">
-                    <FaTag className="mr-2 text-sky-500" />
+                    <FaTag className="mr-2 text-gray-200" />
                     <span className="font-medium">Description: </span>{" "}
                     <span className="truncate">{item.description}</span>
                   </p>
                 </div>
                 <div className="bg-gray-100 dark:bg-gray-700 px-4 py-2 border-t border-gray-200 dark:border-gray-600">
                   <p className="text-gray-700 dark:text-gray-300 text-sm flex items-center">
-                    <FaUserAlt className="mr-2 text-sky-500" />
+                    <FaUserAlt className="mr-2 text-gray-200" />
                     <span className="font-medium">Contact: </span>{" "}
                     {item.contactInfo.name} -
-                    <FaEnvelope className="mx-2 text-sky-500" />{" "}
+                    <FaEnvelope className="mx-2 text-gray-200" />{" "}
                     {item.contactInfo.email}
                   </p>
                 </div>

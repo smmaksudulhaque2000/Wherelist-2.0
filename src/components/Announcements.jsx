@@ -70,7 +70,7 @@ const Announcements = () => {
                 className="text-center mb-8"
             >
                 <h2 className="text-3xl lg:text-4xl font-bold mb-4 mt-10 text-center w-4/4 lg:w-3/4 mx-auto">Latest Announcements</h2>
-                <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">Stay updated with our latest news and updates.</p>
+                <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">Stay updated with our latest news and updates. Here, you'll find important announcements, new feature releases, upcoming events, and any changes to our platform. We keep you informed so you never miss out on what's happening. Check back regularly to stay in the loop!</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

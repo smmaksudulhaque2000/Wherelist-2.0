@@ -127,12 +127,12 @@ const MyItems = () => {
           My Items: {filteredItems.length}
         </h3>
         {filteredItems.length === 0 ? (
-          <p className="text-center text-4xl font-bold text-gray-900 bg-gray-200 p-20 rounded">
+          <p className="text-center text-4xl font-bold text-gray-900 bg-gray-200 p-20 rounded-lg">
             No items found. Start adding some posts!
           </p>
         ) : (
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-white dark:bg-gray-900 shadow-md rounded-md">
+            <table className="w-full border-collapse bg-white dark:bg-gray-900 shadow-md rounded-lg">
               <thead>
                 <tr className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
                   <th className="py-2 px-4 text-left">Image</th>

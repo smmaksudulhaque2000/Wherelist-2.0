@@ -28,7 +28,7 @@ const Footer = () => {
     };
 
     return (
-        <div className="bg-gray-600 text-white flex flex-col justify-center items-center gap-10 py-16 mt-10 px-4 md:px-10">
+        <div className="bg-gray-400 text-white flex flex-col justify-center items-center gap-10 py-16 mt-10 px-4 md:px-10">
             <div className="flex flex-wrap gap-6 justify-center">
             <a href="https://www.facebook.com/maksudulhaque2000" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
                     <FaFacebook className="text-4xl hover:scale-110 transition-transform duration-300" />
@@ -55,15 +55,15 @@ const Footer = () => {
 
             <div className="flex flex-wrap gap-10 justify-center py-8 text-lg text-center">
                 <div className="flex flex-col items-center">
-                    <FaPhoneAlt className="text-3xl mb-2 text-blue-400" />
+                    <FaPhoneAlt className="text-3xl mb-2 text-gray-800" />
                     <span>+880 1518474975</span>
                 </div>
                 <div className="flex flex-col items-center">
-                    <FaEnvelope className="text-3xl mb-2 text-red-600" />
+                    <FaEnvelope className="text-3xl mb-2 text-gray-800" />
                     <span>smmaksudulhaque2000@gmail.com</span>
                 </div>
                 <div className="flex flex-col items-center">
-                    <FaMapMarkerAlt className="text-3xl mb-2 text-green-500" />
+                    <FaMapMarkerAlt className="text-3xl mb-2 text-gray-800" />
                     <span>Rayerbag, Dhaka-1362</span>
                 </div>
             </div>

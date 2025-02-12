@@ -24,7 +24,7 @@ const FAQ = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 mt-10 text-center w-4/4 lg:w-3/4 mx-auto">Frequently Asked Questions</h2>
           <p className="text-lg lg:text-xl text-gray-500 mb-6 text-center w-4/4 lg:w-3/4 mx-auto">
-            Find answers to the most common questions about using this platform.
+          Find answers to the most common questions about using this platform. Whether you're looking for guidance on posting lost or found items, understanding our policies, or learning how to contact item owners, we've got you covered. Browse through frequently asked questions to make the most of your experience on our platform.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
