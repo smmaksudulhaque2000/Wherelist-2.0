@@ -1,7 +1,22 @@
 import { FaFacebook, FaGoogle, FaInstagram, FaTwitter, FaYoutube, FaLinkedin, FaGithub, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
 
 const Footer = () => {
+    useEffect(() => {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+    }, []);
+
     const handleSubscribe = () => {
         Swal.fire({
             title: 'Success!',
@@ -15,7 +30,7 @@ const Footer = () => {
     return (
         <div className="bg-gray-600 text-white flex flex-col justify-center items-center gap-10 py-16 mt-10 px-4 md:px-10">
             <div className="flex flex-wrap gap-6 justify-center">
-                <a href="https://www.facebook.com/maksudulhaque2000" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
+            <a href="https://www.facebook.com/maksudulhaque2000" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
                     <FaFacebook className="text-4xl hover:scale-110 transition-transform duration-300" />
                 </a>
                 <a href="https://www.instagram.com/maksudulhaque2000/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors duration-300">
@@ -73,7 +88,7 @@ const Footer = () => {
             <div className="flex flex-wrap gap-6 justify-center text-center">
                 <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#about">About Us</a>
                 <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#announcements">Our Services</a>
-                <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#">Privacy Policy</a>
+                <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#privacy-policy">Privacy Policy</a>
                 <a className="font-semibold hover:text-gray-300 transition-colors duration-300" href="#faq">FAQ</a>
             </div>
 
